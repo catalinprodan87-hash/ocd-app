@@ -1,0 +1,19 @@
+/* Soft, calm note — same family as the educational voice, never an alert */
+.reread-nudge {
+  background: var(--color-primary-soft);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  margin-bottom: var(--space-5);
+}
+
+.reread-nudge__title {
+  font-weight: 600;
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-2);
+}
+
+.reread-nudge__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}

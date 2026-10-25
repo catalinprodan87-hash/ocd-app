@@ -6,6 +6,8 @@ import Sos from './pages/Sos.jsx'
 import WorstMoments from './pages/WorstMoments.jsx'
 import Settings from './pages/Settings.jsx'
 import Onboarding from './pages/Onboarding.jsx'
+import Learn from './pages/Learn.jsx'
+import Chapter from './pages/Chapter.jsx'
 import Placeholder from './pages/Placeholder.jsx'
 import { getMeta } from './db/db.js'
 import { ui } from './content/ui.js'
@@ -41,7 +43,8 @@ export default function App() {
       <Route element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="sos" element={<Sos />} />
-        <Route path="invata" element={<Placeholder page={ui.pages.learn} />} />
+        <Route path="invata" element={<Learn />} />
+        <Route path="invata/:id" element={<Chapter />} />
         <Route path="compulsii" element={<Placeholder page={ui.pages.compulsions} />} />
         <Route path="expunere" element={<Placeholder page={ui.pages.erp} />} />
         <Route path="progres" element={<Placeholder page={ui.pages.progress} />} />
