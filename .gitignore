@@ -3,3 +3,6 @@ dist
 dev-dist
 .DS_Store
 *.local
+
+# Private product spec: kept on this laptop only, never pushed to the public repo
+PROJECT_SPEC.md
