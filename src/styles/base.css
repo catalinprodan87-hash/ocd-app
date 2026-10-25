@@ -47,6 +47,9 @@ button { font-family: inherit; font-size: inherit; cursor: pointer; }
 }
 .btn--ghost:hover { background: var(--color-surface-soft); }
 .btn--block { width: 100%; }
+/* Destructive action: uses the warm terracotta, never an alarm red */
+.btn--danger { background: var(--color-sos-strong); }
+.btn--danger:hover { background: var(--color-sos); }
 
 /* Layout helpers */
 .page {

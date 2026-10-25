@@ -40,10 +40,6 @@ export const ui = {
       title: 'Progresul tău',
       intro: '[DE COMPLETAT] Scorurile OCI-R în timp și curajul tău.',
     },
-    settings: {
-      title: 'Setări',
-      intro: '[DE COMPLETAT] Avertisment, exportul și ștergerea datelor.',
-    },
   },
 
   comingSoon: 'Această secțiune este în lucru.',
