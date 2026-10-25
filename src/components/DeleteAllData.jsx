@@ -23,10 +23,11 @@ export default function DeleteAllData({ onDeleted }) {
     }
   }
 
-  // Runs when "Șterge toate datele" is tapped.
-  // TODO(Cătălin): decide how the person confirms before everything is wiped.
-  // Until this is written, tapping the button does nothing (safe default).
+  // Runs when "Șterge toate datele" is tapped. One calm, in-page question —
+  // deliberately not more elaborate, so confirming can't turn into a checking ritual.
   function handleDeleteClick() {
+    setError('')
+    setStep('confirming')
   }
 
   return (
