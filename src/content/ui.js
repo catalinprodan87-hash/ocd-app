@@ -25,11 +25,5 @@ export const ui = {
       intro: '[DE COMPLETAT] Câteva cuvinte calde de întâmpinare.',
       worstLink: 'Dacă ești acum în cel mai greu moment',
     },
-    progress: {
-      title: 'Progresul tău',
-      intro: '[DE COMPLETAT] Scorurile OCI-R în timp și curajul tău.',
-    },
   },
-
-  comingSoon: 'Această secțiune este în lucru.',
 }

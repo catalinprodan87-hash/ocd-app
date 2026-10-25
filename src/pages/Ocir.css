@@ -1,0 +1,32 @@
+.ocir-question {
+  font-size: var(--text-xl);
+  min-height: 3.75em; /* keeps the answer buttons from jumping between questions */
+}
+
+.ocir-options {
+  display: grid;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+}
+
+.ocir-option {
+  justify-content: flex-start;
+  gap: var(--space-4);
+  text-align: left;
+}
+.ocir-option[aria-pressed='true'] {
+  background: var(--color-primary-soft);
+  border-color: var(--color-primary);
+}
+
+.ocir-option__value {
+  flex: none;
+  width: 28px;
+  font-weight: 700;
+  color: var(--color-primary-strong);
+}
+
+.ocir-score {
+  font-size: var(--text-xl);
+  font-weight: 700;
+}

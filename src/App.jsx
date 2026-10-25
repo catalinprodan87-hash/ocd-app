@@ -16,9 +16,9 @@ import ErpHome from './pages/ErpHome.jsx'
 import LadderItemForm from './pages/LadderItemForm.jsx'
 import ExposureSession from './pages/ExposureSession.jsx'
 import QuickLog from './pages/QuickLog.jsx'
-import Placeholder from './pages/Placeholder.jsx'
+import Progress from './pages/Progress.jsx'
+import Ocir from './pages/Ocir.jsx'
 import { getMeta } from './db/db.js'
-import { ui } from './content/ui.js'
 
 export default function App() {
   const [onboarded, setOnboarded] = useState(null) // null = still checking
@@ -63,7 +63,8 @@ export default function App() {
         <Route path="expunere/treapta/nou" element={<LadderItemForm />} />
         <Route path="expunere/treapta/:id" element={<LadderItemForm />} />
         <Route path="expunere/sesiune/:id" element={<ExposureSession />} />
-        <Route path="progres" element={<Placeholder page={ui.pages.progress} />} />
+        <Route path="progres" element={<Progress />} />
+        <Route path="progres/chestionar" element={<Ocir />} />
         {/* After "delete everything" the app starts fresh, from onboarding. */}
         <Route path="setari" element={<Settings onAllDeleted={() => setOnboarded(false)} />} />
         <Route path="cel-mai-greu-moment" element={<WorstMoments />} />

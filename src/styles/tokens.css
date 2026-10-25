@@ -27,6 +27,11 @@
   --color-sos-strong: #a9664a;
   --color-sos-soft: #f6e7df;
 
+  /* Charts: a slightly richer teal than --color-primary. The soft sage reads as gray
+     when used as a data line (fails the chroma check); this one passes all checks. */
+  --color-chart: #0b8c80;
+  --color-chart-grid: #ece7df;
+
   /* Spacing scale */
   --space-1: 4px;
   --space-2: 8px;

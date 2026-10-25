@@ -1,0 +1,50 @@
+/* Courage badges */
+.badges {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-3);
+}
+.badge {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+.badge__level {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-founder-bg);
+  border: 1.5px solid var(--color-founder-border);
+  color: var(--color-founder-accent);
+  font-weight: 700;
+}
+
+/* Single OCI-R result: one large number, same sans as everything else */
+.hero-score__value {
+  margin-bottom: var(--space-1);
+  font-size: 3rem; /* ≥48px */
+  font-weight: 600;
+  line-height: 1.1;
+}
+.hero-score__max { font-size: var(--text-lg); font-weight: 400; color: var(--color-text-soft); }
+
+/* Table view of the chart */
+.score-table { margin-bottom: var(--space-4); }
+.score-table summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: var(--color-primary-strong);
+  font-weight: 600;
+}
+.score-table table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.score-table th,
+.score-table td { text-align: left; padding: var(--space-2) 0; border-bottom: 1px solid var(--color-border); }
+.score-table th { font-size: var(--text-sm); color: var(--color-text-soft); font-weight: 600; }

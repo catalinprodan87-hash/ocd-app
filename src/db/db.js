@@ -19,7 +19,7 @@ export const STORES = ['meta', 'compulsions', 'ladderItems', 'sessions', 'logs',
  *               prediction: { text, confidence: 0–100 }, resisted: 'yes'|'partly'|'no',
  *               reflection: { whatHappened, whatLearned }, startedAt, completedAt }
  * logs        { id, ts (ms), compulsionId|null, label|null (copy of the name), gaveIn: boolean }
- * ocir        { id, date, answers: number[18], total }
+ * ocir        { id, date, answers: number[18] (each 0–4), total: 0–72 }
  * readCounts  { contentId, count, lastRead }
  */
 
