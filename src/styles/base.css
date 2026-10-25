@@ -1,0 +1,84 @@
+/* Base/reset + shared layout primitives. Component-specific CSS lives next to components. */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: var(--line-relaxed);
+  color: var(--color-text);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 { line-height: 1.25; margin: 0 0 var(--space-3); }
+h1 { font-size: var(--text-2xl); }
+h2 { font-size: var(--text-xl); }
+h3 { font-size: var(--text-lg); }
+p { margin: 0 0 var(--space-4); }
+
+a { color: var(--color-primary-strong); }
+
+/* Buttons */
+button { font-family: inherit; font-size: inherit; cursor: pointer; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-5);
+  border: none;
+  border-radius: var(--radius-md);
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none; /* .btn is also used on links */
+  min-height: 48px; /* comfortable tap target */
+}
+.btn:hover { background: var(--color-primary-strong); }
+.btn--ghost {
+  background: transparent;
+  color: var(--color-primary-strong);
+  border: 1.5px solid var(--color-border);
+}
+.btn--ghost:hover { background: var(--color-surface-soft); }
+.btn--block { width: 100%; }
+
+/* Layout helpers */
+.page {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--space-5) var(--space-4);
+  /* leave room for the bottom nav and floating SOS button */
+  padding-bottom: calc(var(--nav-height) + var(--space-7));
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-soft);
+  margin-bottom: var(--space-4);
+}
+
+.muted { color: var(--color-text-soft); }
+.stack > * + * { margin-top: var(--space-4); }
+
+/* Visually-hidden but available to screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0);
+  white-space: nowrap; border: 0;
+}
+
+/* Respect users who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}

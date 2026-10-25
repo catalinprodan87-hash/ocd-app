@@ -1,0 +1,20 @@
+.sos-fab {
+  position: fixed;
+  right: var(--space-4);
+  bottom: calc(var(--nav-height) + var(--space-4) + env(safe-area-inset-bottom));
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--color-sos);
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(169, 102, 74, 0.35);
+}
+.sos-fab:hover { background: var(--color-sos-strong); }
+.sos-fab:focus-visible { outline: 3px solid var(--color-sos-soft); outline-offset: 3px; }

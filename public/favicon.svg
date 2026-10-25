@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Placeholder icon [DE COMPLETAT]: replace when the name and visual identity are chosen -->
+  <rect width="512" height="512" rx="112" fill="#5b8a86"/>
+  <circle cx="256" cy="256" r="120" fill="none" stroke="#faf7f2" stroke-width="28"/>
+  <circle cx="256" cy="256" r="40" fill="#f4ecdd"/>
+</svg>
