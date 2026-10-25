@@ -106,9 +106,9 @@ function ThemesStep({ onNext }) {
       <h1>{text.themes.title}</h1>
       <p>{text.themes.body}</p>
 
-      <div className="theme-list">
+      <div className="chip-list">
         {text.themes.options.map((o) => (
-          <label key={o.id} className={'theme-chip' + (selected.includes(o.id) ? ' is-selected' : '')}>
+          <label key={o.id} className={'chip' + (selected.includes(o.id) ? ' is-selected' : '')}>
             <input type="checkbox" checked={selected.includes(o.id)} onChange={() => toggle(o.id)} />
             {o.label}
           </label>

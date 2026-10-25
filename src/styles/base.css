@@ -110,6 +110,47 @@ button { font-family: inherit; font-size: inherit; cursor: pointer; }
   margin-bottom: var(--space-4);
 }
 
+/* Chips: soft, tappable pills (onboarding themes, quick log).
+   Works on a <label> wrapping a hidden checkbox/radio, or on a <button aria-pressed>. */
+.chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+.chip {
+  position: relative; /* anchors a hidden input inside the chip */
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: var(--space-2) var(--space-4);
+  border: 1.5px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font: inherit;
+  cursor: pointer;
+}
+.chip input {
+  /* hidden visually, still focusable and announced by screen readers */
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+.chip.is-selected,
+.chip[aria-pressed='true'] {
+  border-color: var(--color-primary);
+  background: var(--color-primary-soft);
+  color: var(--color-primary-strong);
+  font-weight: 600;
+}
+.chip:focus-within,
+.chip:focus-visible {
+  outline: 3px solid var(--color-primary-soft);
+  outline-offset: 2px;
+}
+
 /* Tappable card list (chapters, compulsion types, inventory items) */
 .link-list {
   list-style: none;

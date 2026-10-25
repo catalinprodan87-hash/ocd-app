@@ -18,7 +18,7 @@ export const STORES = ['meta', 'compulsions', 'ladderItems', 'sessions', 'logs',
  * sessions    { id, ladderItemId, item: { description, level } (copy), step: 'predict'|'expose'|'reflect'|'done',
  *               prediction: { text, confidence: 0–100 }, resisted: 'yes'|'partly'|'no',
  *               reflection: { whatHappened, whatLearned }, startedAt, completedAt }
- * logs        { id, ts, compulsionId?, gaveIn: boolean, note? }
+ * logs        { id, ts (ms), compulsionId|null, label|null (copy of the name), gaveIn: boolean }
  * ocir        { id, date, answers: number[18], total }
  * readCounts  { contentId, count, lastRead }
  */

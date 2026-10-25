@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import ContentBlocks from '../components/ContentBlocks.jsx'
 import { count } from '../db/db.js'
 import { compulsions as text } from '../content/compulsions.js'
+import { quickLog } from '../content/quick-log.js'
 
 // Module home: what compulsions are, the inventory entry point, then all types.
 export default function Compulsions() {
@@ -25,7 +26,10 @@ export default function Compulsions() {
         <p className="muted">
           {inventoryCount === 0 ? text.inventory.empty : inventoryCount !== null && text.inventory.count(inventoryCount)}
         </p>
-        <Link to="/compulsii/inventar" className="btn btn--block">{text.inventory.open}</Link>
+        <div className="stack">
+          <Link to="/compulsii/inventar" className="btn btn--block">{text.inventory.open}</Link>
+          <Link to="/noteaza" className="btn btn--ghost btn--block">{quickLog.openButton}</Link>
+        </div>
       </section>
 
       <h2>{text.visibleTitle}</h2>

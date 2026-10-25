@@ -15,6 +15,7 @@ import InventoryForm from './pages/InventoryForm.jsx'
 import ErpHome from './pages/ErpHome.jsx'
 import LadderItemForm from './pages/LadderItemForm.jsx'
 import ExposureSession from './pages/ExposureSession.jsx'
+import QuickLog from './pages/QuickLog.jsx'
 import Placeholder from './pages/Placeholder.jsx'
 import { getMeta } from './db/db.js'
 import { ui } from './content/ui.js'
@@ -57,6 +58,7 @@ export default function App() {
         <Route path="compulsii/inventar" element={<Inventory />} />
         <Route path="compulsii/inventar/nou" element={<InventoryForm />} />
         <Route path="compulsii/inventar/:id" element={<InventoryForm />} />
+        <Route path="noteaza" element={<QuickLog />} />
         <Route path="expunere" element={<ErpHome />} />
         <Route path="expunere/treapta/nou" element={<LadderItemForm />} />
         <Route path="expunere/treapta/:id" element={<LadderItemForm />} />
