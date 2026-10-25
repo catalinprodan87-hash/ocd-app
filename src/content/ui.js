@@ -25,10 +25,6 @@ export const ui = {
       intro: '[DE COMPLETAT] Câteva cuvinte calde de întâmpinare.',
       worstLink: 'Dacă ești acum în cel mai greu moment',
     },
-    erp: {
-      title: 'Expunere și prevenirea răspunsului',
-      intro: '[DE COMPLETAT] Scara de expunere și sesiunile ghidate.',
-    },
     progress: {
       title: 'Progresul tău',
       intro: '[DE COMPLETAT] Scorurile OCI-R în timp și curajul tău.',

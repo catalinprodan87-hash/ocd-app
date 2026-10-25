@@ -12,6 +12,9 @@ import Compulsions from './pages/Compulsions.jsx'
 import CompulsionType from './pages/CompulsionType.jsx'
 import Inventory from './pages/Inventory.jsx'
 import InventoryForm from './pages/InventoryForm.jsx'
+import ErpHome from './pages/ErpHome.jsx'
+import LadderItemForm from './pages/LadderItemForm.jsx'
+import ExposureSession from './pages/ExposureSession.jsx'
 import Placeholder from './pages/Placeholder.jsx'
 import { getMeta } from './db/db.js'
 import { ui } from './content/ui.js'
@@ -54,7 +57,10 @@ export default function App() {
         <Route path="compulsii/inventar" element={<Inventory />} />
         <Route path="compulsii/inventar/nou" element={<InventoryForm />} />
         <Route path="compulsii/inventar/:id" element={<InventoryForm />} />
-        <Route path="expunere" element={<Placeholder page={ui.pages.erp} />} />
+        <Route path="expunere" element={<ErpHome />} />
+        <Route path="expunere/treapta/nou" element={<LadderItemForm />} />
+        <Route path="expunere/treapta/:id" element={<LadderItemForm />} />
+        <Route path="expunere/sesiune/:id" element={<ExposureSession />} />
         <Route path="progres" element={<Placeholder page={ui.pages.progress} />} />
         {/* After "delete everything" the app starts fresh, from onboarding. */}
         <Route path="setari" element={<Settings onAllDeleted={() => setOnboarded(false)} />} />

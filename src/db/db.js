@@ -14,9 +14,10 @@ export const STORES = ['meta', 'compulsions', 'ladderItems', 'sessions', 'logs',
  *
  * meta        { key, value }  e.g. { key: 'disclaimerAcceptedAt', value: '2026-10-25T…' }
  * compulsions { id, label, kind: 'visible'|'mental', category: typeId|null, instead, createdAt, updatedAt }
- * ladderItems { id, description, theme, baselineSuds: 0–100, archived, createdAt }
- * sessions    { id, ladderItemId, prediction: { text, confidence: 0–100 }, sudsBefore,
- *               resisted, reflection: { whatHappened, whatLearned }, startedAt, completedAt }
+ * ladderItems { id, description, level: 0–100, createdAt, updatedAt }
+ * sessions    { id, ladderItemId, item: { description, level } (copy), step: 'predict'|'expose'|'reflect'|'done',
+ *               prediction: { text, confidence: 0–100 }, resisted: 'yes'|'partly'|'no',
+ *               reflection: { whatHappened, whatLearned }, startedAt, completedAt }
  * logs        { id, ts, compulsionId?, gaveIn: boolean, note? }
  * ocir        { id, date, answers: number[18], total }
  * readCounts  { contentId, count, lastRead }

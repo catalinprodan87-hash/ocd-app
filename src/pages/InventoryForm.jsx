@@ -48,6 +48,7 @@ function Form({ id }) {
   if (existing === false) return <Navigate to="/compulsii/inventar" replace />
 
   function changeKind(newKind) {
+    setErrors((prev) => ({ ...prev, kind: undefined }))
     setKind(newKind)
     // A "washing" category makes no sense on a mental compulsion: clear it.
     if (category && typeById(category)?.kind !== newKind) setCategory('')
@@ -92,7 +93,10 @@ function Form({ id }) {
           id="c-label"
           className="input"
           value={label}
-          onChange={(e) => setLabel(e.target.value)}
+          onChange={(e) => {
+            setErrors((prev) => ({ ...prev, label: undefined }))
+            setLabel(e.target.value)
+          }}
           placeholder={text.labelPlaceholder}
           aria-invalid={!!errors.label}
           aria-describedby={errors.label ? 'c-label-error' : undefined}
