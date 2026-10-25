@@ -1,13 +1,41 @@
-import { Routes, Route } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import Layout from './components/Layout.jsx'
 import Home from './pages/Home.jsx'
 import Sos from './pages/Sos.jsx'
 import WorstMoments from './pages/WorstMoments.jsx'
 import Settings from './pages/Settings.jsx'
+import Onboarding from './pages/Onboarding.jsx'
 import Placeholder from './pages/Placeholder.jsx'
+import { getMeta } from './db/db.js'
 import { ui } from './content/ui.js'
 
 export default function App() {
+  const [onboarded, setOnboarded] = useState(null) // null = still checking
+
+  useEffect(() => {
+    getMeta('onboardingDoneAt')
+      .then((v) => setOnboarded(!!v))
+      // If storage fails, still show something (onboarding) — never a blank screen,
+      // because SOS must always be reachable.
+      .catch(() => setOnboarded(false))
+  }, [])
+
+  if (onboarded === null) return null
+
+  if (!onboarded) {
+    return (
+      <Routes>
+        <Route element={<Layout showNav={false} />}>
+          <Route path="sos" element={<Sos />} />
+          <Route path="cel-mai-greu-moment" element={<WorstMoments />} />
+          <Route path="incepe/:step" element={<Onboarding onDone={() => setOnboarded(true)} />} />
+          <Route path="*" element={<Navigate to="/incepe/bun-venit" replace />} />
+        </Route>
+      </Routes>
+    )
+  }
+
   return (
     <Routes>
       <Route element={<Layout />}>
@@ -17,7 +45,8 @@ export default function App() {
         <Route path="compulsii" element={<Placeholder page={ui.pages.compulsions} />} />
         <Route path="expunere" element={<Placeholder page={ui.pages.erp} />} />
         <Route path="progres" element={<Placeholder page={ui.pages.progress} />} />
-        <Route path="setari" element={<Settings />} />
+        {/* After "delete everything" the app starts fresh, from onboarding. */}
+        <Route path="setari" element={<Settings onAllDeleted={() => setOnboarded(false)} />} />
         <Route path="cel-mai-greu-moment" element={<WorstMoments />} />
         <Route path="*" element={<Home />} />
       </Route>

@@ -47,9 +47,24 @@ button { font-family: inherit; font-size: inherit; cursor: pointer; }
 }
 .btn--ghost:hover { background: var(--color-surface-soft); }
 .btn--block { width: 100%; }
+.back-button { margin: var(--space-4) 0 0 var(--space-4); }
 /* Destructive action: uses the warm terracotta, never an alarm red */
 .btn--danger { background: var(--color-sos-strong); }
 .btn--danger:hover { background: var(--color-sos); }
+
+/* Text inputs */
+.input {
+  display: block;
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  margin-bottom: var(--space-4);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  font: inherit;
+  color: inherit;
+}
+.input:focus { outline: none; border-color: var(--color-primary); }
 
 /* Layout helpers */
 .page {

@@ -16,6 +16,7 @@ export const ui = {
 
   navLabel: 'Navigare principală', // for screen readers
   sosButton: 'SOS',
+  back: '← Înapoi',
   sosButtonLabel: 'Deschide ecranul SOS', // for screen readers
 
   pages: {

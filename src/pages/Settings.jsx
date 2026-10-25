@@ -4,7 +4,7 @@ import DeleteAllData from '../components/DeleteAllData.jsx'
 import { settings } from '../content/settings.js'
 import { disclaimer } from '../content/disclaimer.js'
 
-export default function Settings() {
+export default function Settings({ onAllDeleted }) {
   const [counts, setCounts] = useState(null) // { storeName: number } once loaded
   const [exportMsg, setExportMsg] = useState('')
 
@@ -63,7 +63,7 @@ export default function Settings() {
         {exportMsg && <p className="muted" role="status" style={{ margin: 'var(--space-3) 0 0' }}>{exportMsg}</p>}
       </section>
 
-      <DeleteAllData onDeleted={loadCounts} />
+      <DeleteAllData onDeleted={onAllDeleted} />
 
       <section className="card">
         <h2>{settings.disclaimerTitle}</h2>
