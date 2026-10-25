@@ -8,6 +8,10 @@ import Settings from './pages/Settings.jsx'
 import Onboarding from './pages/Onboarding.jsx'
 import Learn from './pages/Learn.jsx'
 import Chapter from './pages/Chapter.jsx'
+import Compulsions from './pages/Compulsions.jsx'
+import CompulsionType from './pages/CompulsionType.jsx'
+import Inventory from './pages/Inventory.jsx'
+import InventoryForm from './pages/InventoryForm.jsx'
 import Placeholder from './pages/Placeholder.jsx'
 import { getMeta } from './db/db.js'
 import { ui } from './content/ui.js'
@@ -45,7 +49,11 @@ export default function App() {
         <Route path="sos" element={<Sos />} />
         <Route path="invata" element={<Learn />} />
         <Route path="invata/:id" element={<Chapter />} />
-        <Route path="compulsii" element={<Placeholder page={ui.pages.compulsions} />} />
+        <Route path="compulsii" element={<Compulsions />} />
+        <Route path="compulsii/tip/:id" element={<CompulsionType />} />
+        <Route path="compulsii/inventar" element={<Inventory />} />
+        <Route path="compulsii/inventar/nou" element={<InventoryForm />} />
+        <Route path="compulsii/inventar/:id" element={<InventoryForm />} />
         <Route path="expunere" element={<Placeholder page={ui.pages.erp} />} />
         <Route path="progres" element={<Placeholder page={ui.pages.progress} />} />
         {/* After "delete everything" the app starts fresh, from onboarding. */}

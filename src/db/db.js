@@ -13,7 +13,7 @@ export const STORES = ['meta', 'compulsions', 'ladderItems', 'sessions', 'logs',
  * Data shapes (for reference — JavaScript doesn't enforce them):
  *
  * meta        { key, value }  e.g. { key: 'disclaimerAcceptedAt', value: '2026-10-25T…' }
- * compulsions { id, label, kind: 'visible'|'mental', category, note, createdAt }
+ * compulsions { id, label, kind: 'visible'|'mental', category: typeId|null, instead, createdAt, updatedAt }
  * ladderItems { id, description, theme, baselineSuds: 0–100, archived, createdAt }
  * sessions    { id, ladderItemId, prediction: { text, confidence: 0–100 }, sudsBefore,
  *               resisted, reflection: { whatHappened, whatLearned }, startedAt, completedAt }

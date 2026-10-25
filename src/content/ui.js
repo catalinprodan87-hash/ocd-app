@@ -25,10 +25,6 @@ export const ui = {
       intro: '[DE COMPLETAT] Câteva cuvinte calde de întâmpinare.',
       worstLink: 'Dacă ești acum în cel mai greu moment',
     },
-    compulsions: {
-      title: 'Compulsiile tale',
-      intro: '[DE COMPLETAT] Ce sunt compulsiile și cum le recunoști.',
-    },
     erp: {
       title: 'Expunere și prevenirea răspunsului',
       intro: '[DE COMPLETAT] Scara de expunere și sesiunile ghidate.',
