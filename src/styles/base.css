@@ -53,8 +53,8 @@ button { font-family: inherit; font-size: inherit; cursor: pointer; }
   max-width: var(--content-max);
   margin: 0 auto;
   padding: var(--space-5) var(--space-4);
-  /* leave room for the bottom nav and floating SOS button */
-  padding-bottom: calc(var(--nav-height) + var(--space-7));
+  /* leave room for the bottom nav + floating SOS button (60px tall, 16px above the nav) */
+  padding-bottom: calc(var(--nav-height) + 100px + env(safe-area-inset-bottom));
 }
 
 .card {

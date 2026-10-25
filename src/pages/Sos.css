@@ -1,0 +1,42 @@
+.sos-skills {
+  display: grid;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+.sos-skill {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+}
+
+.sos-skill__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 56px;
+  padding: var(--space-3) var(--space-5);
+  font-weight: 600;
+  font-size: var(--text-lg);
+  cursor: pointer;
+  list-style: none; /* hide default triangle */
+}
+.sos-skill__title::-webkit-details-marker { display: none; }
+.sos-skill__title::after {
+  content: '+';
+  font-size: var(--text-xl);
+  color: var(--color-primary);
+}
+.sos-skill[open] .sos-skill__title::after { content: '−'; }
+
+.sos-skill__body {
+  margin: 0;
+  padding: 0 var(--space-5) var(--space-5);
+  color: var(--color-text-soft);
+}
+
+.sos-disclaimer {
+  margin-top: var(--space-5);
+  font-size: var(--text-sm);
+}

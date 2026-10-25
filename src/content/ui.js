@@ -22,6 +22,7 @@ export const ui = {
     home: {
       title: 'Bun venit',
       intro: '[DE COMPLETAT] Câteva cuvinte calde de întâmpinare.',
+      worstLink: 'Dacă ești acum în cel mai greu moment',
     },
     learn: {
       title: 'Învață despre TOC',
@@ -42,10 +43,6 @@ export const ui = {
     settings: {
       title: 'Setări',
       intro: '[DE COMPLETAT] Avertisment, exportul și ștergerea datelor.',
-    },
-    worst: {
-      title: 'Dacă ești acum în cel mai greu moment',
-      intro: '[DE COMPLETAT] Mesajele fondatorului (principiile 6 și 8).',
     },
   },
 

@@ -11,6 +11,9 @@ export default defineConfig({
   // host: true lets a phone on the same Wi-Fi open the dev server (dev only, not the published app)
   server: { port: 5175, host: true },
   preview: { port: 5176, host: true },
+  // Empty inline PostCSS config stops Vite from picking up the parent folder's
+  // Tailwind setup (romanian-guide). This app uses plain CSS only.
+  css: { postcss: {} },
   plugins: [
     react(),
     VitePWA({
