@@ -22,7 +22,7 @@ export const ui = {
   pages: {
     home: {
       title: 'Bun venit',
-      intro: '[DE COMPLETAT] Câteva cuvinte calde de întâmpinare.',
+      intro: 'Ne bucurăm că ești aici. Poți face azi un pas mic: citește un capitol, notează o compulsie sau încearcă o expunere. Dacă e un moment greu, apasă SOS.',
       worstLink: 'Dacă ești acum în cel mai greu moment',
     },
   },

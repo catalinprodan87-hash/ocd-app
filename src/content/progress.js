@@ -3,11 +3,11 @@
 
 export const progress = {
   title: 'Progresul tău',
-  intro: '[DE COMPLETAT] Aici vezi curajul tău și cum evoluează lucrurile în timp. Nu e o notă.',
+  intro: 'Aici vezi curajul tău și cum evoluează lucrurile în timp. Nu e o notă și nu trebuie să fie perfect.',
 
   ocir: {
     title: 'Chestionarul OCI-R',
-    none: '[DE COMPLETAT] Încă nu ai completat chestionarul. Îl poți face acum, apoi o dată la câteva săptămâni.',
+    none: 'Încă nu ai completat chestionarul. Îl poți face acum, apoi o dată la câteva săptămâni, ca să vezi cum evoluezi.',
     take: 'Completează chestionarul',
     takeAgain: 'Completează din nou',
     single: (date) => `Completat pe ${date}`,
@@ -22,7 +22,7 @@ export const progress = {
   courage: {
     title: 'Curajul tău',
     exposures: (n) => (n === 1 ? 'Ai făcut 1 expunere.' : `Ai făcut ${n} expuneri.`),
-    none: '[DE COMPLETAT] Când faci prima expunere, o vei vedea aici.',
+    none: 'Când faci prima expunere, o vei vedea aici.',
     // Courage badges: highest step levels faced (spec: "You faced a level-60 trigger").
     // Every completed exposure counts — whether or not the compulsion was resisted.
     badge: (level) => `Ai înfruntat o treaptă de nivel ${level} sau mai mult`,

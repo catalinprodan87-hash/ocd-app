@@ -5,8 +5,8 @@
 // - name that re-reading to feel sure can itself become a compulsion; invite leaving it unresolved
 
 export const rereadNudge = {
-  title: '[DE COMPLETAT] Un titlu blând',
-  body: '[DE COMPLETAT] Ai deschis acest capitol de mai multe ori la rând. Uneori recititul devine o verificare…',
+  title: 'O mică pauză',
+  body: 'Ai deschis această pagină de mai multe ori la rând. Uneori recititul devine o verificare: cauți încă o dată senzația că ești sigur. Poți să o lași nerezolvată și să faci altceva acum.',
   dismiss: 'Am înțeles',
   sosLink: 'Încearcă un exercițiu SOS',
 }

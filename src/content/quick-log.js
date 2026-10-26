@@ -11,10 +11,10 @@ export const quickLog = {
   gaveIn: 'Am făcut-o',
   resisted: 'Am rezistat',
 
-  // Same message whatever the answer: noticing is the skill. [DE COMPLETAT]
+  // Same message whatever the answer: noticing is the skill.
   saved: {
     title: 'Notat.',
-    body: '[DE COMPLETAT] Faptul că ai observat-o contează.',
+    body: 'Faptul că ai observat-o contează. Așa începe schimbarea.',
     undo: 'Anulează',
     undone: 'Am anulat notarea.',
     another: 'Notează încă una',

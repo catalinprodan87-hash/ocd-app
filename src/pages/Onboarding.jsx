@@ -152,6 +152,7 @@ function SafetyStep({ onFinish }) {
     <>
       <h1>{s.title}</h1>
       <p>{s.question}</p>
+      {s.hint && <p className="muted">{s.hint}</p>}
       <p className="muted">{s.privacyNote}</p>
       <div className="stack">
         <button className="btn btn--ghost btn--block" onClick={() => setFlagged(true)}>{s.answers.yes}</button>

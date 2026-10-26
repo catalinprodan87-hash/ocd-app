@@ -3,5 +3,5 @@
 
 export const founderVoice = {
   label: 'De la cineva care a trecut prin asta',
-  signature: '— Cătălin', // [DE COMPLETAT] cum vrei să semnezi
+  signature: '— Cătălin',
 }

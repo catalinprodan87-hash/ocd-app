@@ -6,3 +6,6 @@ dev-dist
 
 # Private product spec: kept on this laptop only, never pushed to the public repo
 PROJECT_SPEC.md
+
+# Local Claude Code settings
+.claude/

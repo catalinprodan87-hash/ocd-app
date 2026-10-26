@@ -12,7 +12,7 @@ export const chapters = [ceEsteToc, gandurIntruzive, alarma, cuCatLupti, innebun
 
 export const learn = {
   title: 'Învață despre TOC',
-  intro: '[DE COMPLETAT] Capitole scurte. Le poți citi în orice ordine.',
+  intro: 'Capitole scurte despre TOC. Le poți citi în orice ordine, o singură dată e de ajuns.',
   chapterLabel: (n) => `Capitolul ${n}`,
   previous: '← Capitolul anterior',
   next: 'Capitolul următor →',

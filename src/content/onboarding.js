@@ -1,5 +1,9 @@
 // Onboarding (spec module A): welcome → disclaimer ("Înțeleg") → themes → safety screen.
 // The disclaimer text itself lives in disclaimer.js.
+// Crisis numbers come from config/crisis.js so they're defined in one place only.
+import { crisisResources } from '../config/crisis.js'
+
+const [emergency] = crisisResources
 
 export const onboarding = {
   stepLabel: (n, total) => `Pasul ${n} din ${total}`,
@@ -8,13 +12,13 @@ export const onboarding = {
 
   welcome: {
     title: 'Bun venit',
-    body: '[DE COMPLETAT] Câteva fraze calde: ce este aplicația, pentru cine e, că nu ești singur.',
+    body: 'Această aplicație este pentru oamenii care trăiesc cu TOC (tulburare obsesiv-compulsivă) și pentru cei care vor să-i înțeleagă. Te ajută să înțelegi ce se întâmplă în mintea ta și să exersezi, pas cu pas, metode verificate științific. Nu ești singur în asta.',
     privacy: 'Nu ai nevoie de cont. Tot ce scrii rămâne doar pe acest telefon.',
   },
 
   themes: {
     title: 'Cum arată TOC-ul tău?',
-    body: 'Alege una sau mai multe teme. Poți schimba oricând. [DE COMPLETAT — verificare text]',
+    body: 'Alege una sau mai multe teme. Poți schimba oricând. TOC-ul poate lua nenumărate forme: dacă al tău nu se regăsește aici, alege „Altceva”.',
     // Order and wording from the spec (module A). ids are stored; labels can be edited freely.
     options: [
       { id: 'contamination', label: 'Contaminare' },
@@ -33,8 +37,9 @@ export const onboarding = {
 
   safety: {
     title: 'O întrebare importantă',
-    // [DE COMPLETAT] Exact wording must come from / be reviewed by a clinician.
-    question: '[DE COMPLETAT — întrebarea de siguranță despre gânduri de a-ți face rău, verificată de un clinician]',
+    // ⚠️ DRAFT wording (2026-10-25): must be reviewed by a clinician before launch.
+    question: 'În ultima vreme, te-ai gândit că ar fi mai bine să nu mai trăiești sau te-ai gândit să-ți faci rău?',
+    hint: 'Dacă nu știi sigur cum să răspunzi, alege „Da”. Îți vom arăta unde găsești ajutor.',
     privacyNote: 'Răspunsul tău nu se salvează nicăieri.',
     answers: {
       yes: 'Da',
@@ -44,7 +49,7 @@ export const onboarding = {
     // Shown after "Da" or "Prefer să nu răspund", together with the crisis numbers.
     flagged: {
       title: 'Mulțumim că ne-ai spus.',
-      body: '[DE COMPLETAT] Mesaj blând: nu ești singur, recomandarea de a vorbi cu un specialist cât mai curând.',
+      body: `Nu ești singur. Te rugăm să vorbești cât mai curând cu un specialist (medicul de familie, un psihiatru sau un psiholog) și cu cineva în care ai încredere. Dacă ești în pericol acum, sună la ${emergency.number}.`,
       continue: 'Continuă în aplicație',
     },
     finish: 'Intră în aplicație',

@@ -8,7 +8,7 @@
 
 export const ocir = {
   title: 'Chestionarul OCI-R',
-  intro: '[DE COMPLETAT] Ce este chestionarul, cât durează (câteva minute), că NU este un diagnostic, ci un mod de a vedea cum evoluezi în timp și ceva ce poți arăta unui specialist.',
+  intro: 'Un chestionar scurt, de câteva minute, despre cât de mult te-au deranjat simptomele TOC în ultima vreme. Nu este un diagnostic. Te ajută să vezi cum evoluezi în timp și poți să-i arăți rezultatele unui specialist.',
   instruction: '[DE COMPLETAT — instrucțiunea din traducerea licențiată, inclusiv perioada de referință]',
   start: 'Începe',
   resume: 'Continuă de unde ai rămas',
@@ -31,7 +31,7 @@ export const ocir = {
     title: 'Ai completat chestionarul recent',
     body: (days) => {
       const when = days === 0 ? 'astăzi' : days === 1 ? 'ieri' : `acum ${days} zile`
-      return `Ultima dată a fost ${when}. [DE COMPLETAT] Scorurile se schimbă încet; e mai util să-l completezi o dată la câteva săptămâni.`
+      return `Ultima dată a fost ${when}. Scorurile se schimbă încet; e mai util să-l completezi o dată la câteva săptămâni.`
     },
     continueAnyway: 'Vreau să-l completez acum',
     notNow: 'Nu acum',
@@ -39,8 +39,8 @@ export const ocir = {
 
   // Home card when there's no score yet, or the last one is a few weeks old. No guilt.
   reminder: {
-    first: '[DE COMPLETAT] Când ai câteva minute, poți completa un scurt chestionar ca să vezi cum evoluezi în timp.',
-    again: '[DE COMPLETAT] Au trecut câteva săptămâni. Dacă vrei, poți completa din nou chestionarul.',
+    first: 'Când ai câteva minute, poți completa un scurt chestionar ca să vezi cum evoluezi în timp.',
+    again: 'Au trecut câteva săptămâni. Dacă vrei, poți completa din nou chestionarul.',
     button: 'Completează chestionarul',
   },
 
@@ -48,7 +48,7 @@ export const ocir = {
     title: 'Mulțumim.',
     score: (n, max) => `Scorul tău: ${n} din ${max}`,
     previous: (n, date) => `Data trecută (${date}): ${n}`,
-    meaning: '[DE COMPLETAT] Ce înseamnă scorul fără a-l interpreta ca diagnostic; de ce contează tendința în timp, nu un număr.',
+    meaning: 'Scorul nu este un diagnostic și nu spune cine ești. Contează direcția în timp, nu un singur număr. Dacă te îngrijorează rezultatul, vorbește despre el cu un specialist.',
     toProgress: 'Vezi progresul',
   },
 }
